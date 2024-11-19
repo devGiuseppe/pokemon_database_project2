@@ -4,13 +4,16 @@ Criado por Giuseppe Filippo Camardella Barbosa
 RA: 22121068-5
 
 🐾 Descrição do Projeto
+
 Este projeto tem como objetivo criar um banco de dados para armazenar informações de Pokémon, suas habilidades únicas, e os movimentos que podem realizar em batalhas. Assim como Pikachu, cada Pokémon tem seu próprio estilo e características que o tornam especial!
 
 🧩 Modelo Relacional
+
 Aqui está o modelo relacional usado para estruturar o banco de dados:
 ![image](https://github.com/user-attachments/assets/ca3843ea-dd56-4dca-af0d-c527f8dc24fd)
 
 🎮 Sobre os Pokémon
+
 Cada Pokémon é um ser fictício do universo Pokémon.
 Eles participam de batalhas, cada um com uma habilidade única e um conjunto de 4 movimentos.
 Movimentos podem variar em tipo, poder e categoria (físico, especial ou status).
@@ -22,8 +25,7 @@ Para usar este projeto, siga os passos abaixo:
 
 Configurar o Banco de Dados PostgreSQL:
 
-Configure o PostgreSQL no seu ambiente local.
-Certifique-se de ter as dependências Python instaladas (psycopg2 ou equivalente).
+
 Criar as Tabelas no Banco de Dados:
 Utilize as queries fornecidas abaixo para criar a estrutura inicial.
 
@@ -134,6 +136,6 @@ JOIN pokemon_movimentos pm ON p.id = pm.pokemon_id
 GROUP BY p.id
 HAVING COUNT(pm.movimento_nome) > 3;
 🌟 Coloque seu Pikachu para brilhar!
-Configure o banco de dados, rode o código, e explore o universo Pokémon com queries mágicas e temáticas. Lembre-se: ser um Mestre Pokémon exige prática e estratégia!
+Configure o banco de dados, rode o código, e explore o universo Pokémon com queries mágicas e temáticas.
 
 ⚡ Gotta catch 'em all! ⚡
