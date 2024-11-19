@@ -37,3 +37,55 @@ CREATE TABLE IF NOT EXISTS pokemon_movimentos (
     movimento_nome VARCHAR(50) REFERENCES movimentos(name) ON DELETE CASCADE,
     PRIMARY KEY (pokemon_id, movimento_nome)
 );
+"Queries interessantes"
+ Pokémon do tipo "Psíquico
+ SELECT * 
+FROM pokemons 
+WHERE tipo1 = 'Psychic' OR tipo2 = 'Psychic';
+Pokémon com o movimento "Blizzard"
+SELECT p.*
+FROM pokemons p
+JOIN pokemon_movimentos pm ON p.id = pm.pokemon_id
+WHERE pm.movimento_nome = 'Blizzard';
+3. Movimentos do tipo "Grama"
+SELECT * 
+FROM movimentos 
+WHERE type = 'Grass';
+Pokémon do tipo "Fantasma"
+SELECT * 
+FROM pokemons 
+WHERE tipo1 = 'Ghost' OR tipo2 = 'Ghost';
+Pokémon com dois tipos
+SELECT * 
+FROM pokemons 
+WHERE tipo2 != 'None';
+Pokémon com movimento de categoria "Especial"
+SELECT DISTINCT p.*
+FROM pokemons p
+JOIN pokemon_movimentos pm ON p.id = pm.pokemon_id
+JOIN movimentos m ON pm.movimento_nome = m.name
+WHERE m.category = 'Special';
+Pokémon que possuem movimentos com mais de 50 de poder
+SELECT DISTINCT p.*
+FROM pokemons p
+JOIN pokemon_movimentos pm ON p.id = pm.pokemon_id
+JOIN movimentos m ON pm.movimento_nome = m.name
+WHERE CAST(m.power AS INTEGER) > 50;
+Movimentos com precisão menor que 90
+SELECT * 
+FROM movimentos 
+WHERE CAST(accuracy AS INTEGER) < 90;
+Pokémon com movimentos do tipo "Fogo"
+SELECT DISTINCT p.*
+FROM pokemons p
+JOIN pokemon_movimentos pm ON p.id = pm.pokemon_id
+JOIN movimentos m ON pm.movimento_nome = m.name
+WHERE m.type = 'Fire';
+Pokémon com mais de 3 movimentos associados
+SELECT p.*, COUNT(pm.movimento_nome) as total_movimentos
+FROM pokemons p
+JOIN pokemon_movimentos pm ON p.id = pm.pokemon_id
+GROUP BY p.id
+HAVING COUNT(pm.movimento_nome) > 3;
+
+
