@@ -22,6 +22,10 @@ def gerar_pokemons(n):
     ]
     habilidades_usadas = set()
 
+    # Lista base para criar nomes temáticos
+    nomes_base = ["Pika", "Char", "Bulba", "Squir", "Eeve", "Mew", "Drago", "Flare", "Jiggly", "Psy", "Zap", "Mag", "Veno"]
+    sufixos = ["chu", "mon", "lord", "ling", "tail", "beam", "wing", "dash", "pulse", "quake"]
+
     pokemons = []
     for i in range(1, n + 1):
         habilidade = random.choice(habilidades_disponiveis)
@@ -36,15 +40,19 @@ def gerar_pokemons(n):
             else "None"
         )
 
+        # Gerar nomes aleatórios e temáticos
+        nome = random.choice(nomes_base) + random.choice(sufixos)
+
         pokemon = {
             "id": i,
-            "nome": fake.first_name(),
+            "nome": nome,
             "tipo1": tipo1,
             "tipo2": tipo2,
             "habilidade": habilidade
         }
         pokemons.append(pokemon)
     return pokemons
+
 
 # Função para associar movimentos
 def associar_movimentos(pokemons, movimentos):
