@@ -1,4 +1,5 @@
 ⚡ Projeto Pokémon Database ⚡
+
 Criado por Giuseppe Filippo Camardella Barbosa
 RA: 22121068-5
 
