@@ -7,13 +7,14 @@ Este projeto tem como objetivo criar um banco de dados para armazenar informaç�
 
 🧩 Modelo Relacional
 Aqui está o modelo relacional usado para estruturar o banco de dados:
-⚠ Insira aqui o link ou a imagem do diagrama relacional ⚠
+![image](https://github.com/user-attachments/assets/ca3843ea-dd56-4dca-af0d-c527f8dc24fd)
 
 🎮 Sobre os Pokémon
 Cada Pokémon é um ser fictício do universo Pokémon.
 Eles participam de batalhas, cada um com uma habilidade única e um conjunto de 4 movimentos.
 Movimentos podem variar em tipo, poder e categoria (físico, especial ou status).
 Assim como Pikachu, alguns Pokémon brilham mais com seus tipos e movimentos! 🌟
+![image](https://github.com/user-attachments/assets/2bf94039-320d-46a1-a260-87203eafcc1a)
 
 ⚙️ Instruções de Uso
 Para usar este projeto, siga os passos abaixo:
